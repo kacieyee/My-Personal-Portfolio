@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Projects - Kacie Yee's Personal Website</title>
+
+
+  <script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal")
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 50;
+            //mess with elementVisible later to make appear sooner
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+            else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+  </script>
+
+  <style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 14px 16px;
+        overflow: hidden;
+        background-color: #FFFAF6;
+        
+    }
+
+    li {
+        float: right;
+    }
+
+    li a {
+        display: block;
+        color: #3A78A6;
+        font-family: Helvetica;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    li a:hover:not(.active) {
+        border-bottom: 3px solid #bcd6e9;
+    }
+
+    .active {
+        background-color: #FFFAF6;
+        border-bottom: 3px solid #3A78A6
+    }
+
+    h1 {
+        font-family: Helvetica;
+        color: #114C77;
+        text-decoration: none;
+        font-size: 3vw;
+        font-weight: 60;
+        padding-left: 10%;
+    }
+
+    h2 {
+        position: absolute;
+        font-size: 1.2vw;
+        font-weight: bold;
+        font-family: Helvetica;
+        text-align: left;
+        padding: none;
+        color: #FFFAF6;
+        padding: 1% 10%;
+        bottom: 21%;
+    }
+
+    h3 {
+        position: absolute;
+        font-size: 0.8vw;
+        font-weight: bold;
+        font-family: Helvetica;
+        text-align: left;
+        padding: none;
+        color: #85a0b3;
+        padding: 1% 10%;
+        bottom: 1%;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        overflow-y: scroll;
+        animation: fadeInAnimation ease 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    @keyframes fadeInAnimation {
+        0% { opacity: 0; }
+        100% { opacity: 1;}
+    }
+
+    .row {
+        text-align: center;
+        width: 100%;
+        height: 30vw;
+        padding-left: 9%;
+        padding-right: 9%;
+        border-style: hidden;
+    }
+
+    .column {
+        float: left;
+        width: 25%;
+        padding: 15px;
+        height: 20vw;
+    }
+
+
+    .container {
+        position: relative;
+        text-align: left;
+        color: #FFFAF6;
+    }
+
+    .image-text {
+        position: absolute;
+        bottom: 10%;
+        font-size: 1vw;
+        font-family: Helvetica;
+        text-align: left;
+        padding: 1% 10%;
+        color: #e2e5ee;
+    }
+
+    .row:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .reveal {
+        position: relative;
+        transform: translateY(5vw);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+
+    .reveal.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+    <ul>
+        <li> <a href = "Contact.html">Contact</a></li>
+        <li style="float:right"><a class="active" href="Projects.html">Projects</a></li>
+        <li> <a href = "../index.html">Home</a></li>
+    </ul>
+
+    <body style= "background-color:#FFFAF6">
+
+    
+    <h1>Projects </h1> 
+  
+    <div class = "row">
+        <div class = "column">
+
+            <div class = "container">
+                <a href = "https://www.canva.com/design/DAFbtnGKWlo/srxFWGyw8eO4VzOuIZ7xqA/edit?utm_content=DAFbtnGKWlo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank"> <img src = "https://cdn.discordapp.com/attachments/646535330765471766/1095107921991434392/image.png" 
+                    width = 100% 
+                    height = auto 
+                    alt = "Mobile Galaxy Orion"> </a>
+            
+                <h2>Mobile Galaxy Orion</h2>
+                <div class = "image-text"> 
+                    <br>
+                    A potential design for an official UTD app.
+                    Created for  AIGA's 2023 Design Challenge, winning first
+                    place in presentation.
+                </div>
+                <h3> March 2023</h3>
+            </div>
+
+            
+        </div>
+
+        <div class = "column">
+
+            <div class = "container">
+                <a href = "https://devpost.com/software/coding-cat-tales?ref_content=my-projects-tab&ref_feature=my_projects" target="_blank"><img src = "https://cdn.discordapp.com/attachments/646535330765471766/1095108485554897026/image.png" 
+                    width = 100% 
+                    height = auto 
+                    alt = "Coding Cat Tales"></a>
+                <h2>Coding Cat Tales</h2>
+                <div class = "image-text">
+                    <br>
+                    An app for kids to teach coding and kindness. 
+                    A winner in the WEHack23 General Challenge.
+                </div>
+                <h3> February 2023 </h3>
+            </div>
+            
+            
+        </div>
+
+        <div class = "column">
+            
+            <div class = "container">
+                <a href = "https://github.com/acm-projects/Zero-To-Hero/" target="_blank"> <img src = "https://cdn.discordapp.com/attachments/646535330765471766/1095111924091457617/image.png" 
+                    width = 100% 
+                    height = auto 
+                    alt = "Zero to Hero"> </a>
+                <h2>Zero to Hero</h2>
+                <div class = "image-text">
+                    An Android app to help you stay on top of chores,
+                    goals, and provides statistics to keep you motivated.
+                </div>
+                <h3> May 2022 </h3>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class = "row reveal">
+        
+        <div class = "column">
+            <div class = "container"> 
+                <a href = "https://devpost.com/software/there-is-no-planet-b-ee" target="_blank"> <img src = "https://cdn.discordapp.com/attachments/646535330765471766/1097635988165111848/image.png" 
+                    width = 100% 
+                    height = auto 
+                    alt = "There is no Planet B(ee)"> </a>
+                <h2>There is no Planet B(ee)</h2>
+                <div class = "image-text"> 
+                    A mobile app to teach children about sustainability 
+                    in a fun and interactive manner. Featuring
+                    our mascot, Albie!
+                </div>
+                <h3> February 2022</h3>
+            </div>
+        </div>
+
+        <div class = "column">
+            <div class = "container">
+                <a href = "https://iangw.itch.io/mortem" target="_blank"><img src = "https://cdn.discordapp.com/attachments/646535330765471766/1095113656188026900/image.png" 
+                    width = 100% 
+                    height = auto 
+                    alt = "Mortem"></a>
+                <h2>Mortem</h2>
+                <div class = "image-text">
+                    <br>
+                    A FPS where you play as the scythe-wielding Grim Reaper. Inspired
+                    by the Latin term "memento memori"- the inevitability of death. 
+                </div>
+                <h3> October 2021 </h3>
+            </div>
+            
+        </div>
+
+        
+        <div class = "column">
+            <div class = "container">
+                <a href = "https://devpost.com/software/utd-study-spots" target="_blank"> <img src = "https://cdn.discordapp.com/attachments/646535330765471766/1097636840405741618/image.png" 
+                    width = 100% 
+                    height = auto 
+                    alt = "UTD Study Spots Home Page"> </a>
+                <h2>UTD Study Spots</h2>
+                <div class = "image-text">
+                    A helpful webpage with photos and information
+                    of most study spots on the UTDallas campus. Perfect
+                    for finals week!
+                </div>
+                <h3> November 2021 </h3>
+            </div>
+            
+        </div> 
+        
+
+
+    </div>
+
+    
+
+    <div class = "row reveal">
+        <div class = "column">
+            <div class = "container"> 
+                <a href = "https://devpost.com/software/creaticat" target="_blank"> <img src = "https://cdn.discordapp.com/attachments/646535330765471766/1097637767279808573/image.png" 
+                    width = 100% 
+                    height = auto 
+                    alt = "Creaticat mascot"> </a>
+                <h2>Creaticat</h2>
+                <div class = "image-text">
+                    <br>
+                    A Discord bot that promotes active group chats
+                    to keep communities together during the pandemic.
+                </div>
+                <h3> November 2020 </h3>
+            </div>
+        </div>
+
+        <div class = "column">
+            <div class = "container">
+                <a href = "https://youtu.be/iz7ooo5k7JI" target="_blank"> <img src = "https://cdn.discordapp.com/attachments/646535330765471766/1097638423193468968/image.png" 
+                    width = 100% 
+                    height = auto 
+                    alt = "Calypso's Kingdom"> </a>
+                <h2>Calypo's Kingdom</h2>
+                <div class = "image-text">
+                    Almost like the classic Mario Game, but differs in that 
+                    it creates infinite maps with procedural generation.
+                </div>
+                <h3> August 2020 </h3>
+            </div>
+        </div>
+
+        
+        <div class = "column">
+            <div class = "container">
+                <a href = "https://docs.google.com/document/d/1xaP3fFuESYYw_JHLyqY2R4zE622WzOSQs5ueTdUeeTk/edit?usp=sharing" target="_blank"> <img src = "https://cdn.discordapp.com/attachments/646535330765471766/1097638893093924914/image.png" 
+                    width = 100% 
+                    height = auto 
+                    alt = "JRPGW"> </a>
+                <h2>JRPGW</h2>
+                <div class = "image-text">
+                    A JRPG-inspired game about reflecting on your  
+                    decisions and how a small decision can make large impacts.
+                </div>
+                <h3> July 2020 </h3>
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            <!-- put resume as a pdf into a new tab? -->
+        
+
+        
+
+</body>
+
+ 
+
+
+
+</html>

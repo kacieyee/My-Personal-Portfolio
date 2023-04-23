@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Kacie Yee's Personal Website </title>
+
+  <script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal")
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            //mess with elementVisible later to make appear sooner
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+            else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+    
+  </script>
+
+  <style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 14px 16px;
+        overflow: hidden;
+        background-color: #FFFAF6;
+        
+    }
+
+    li {
+        float: right;
+    }
+
+    li a {
+        display: block;
+        color: #3A78A6;
+        font-family: Helvetica;
+        text-align: center;
+
+        padding: 14px 16px;
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    li a:hover:not(.active) {
+        border-bottom: 3px solid #bcd6e9;
+    }
+
+    .active {
+        background-color: #FFFAF6;
+        border-bottom: 3px solid #3A78A6
+    }
+
+    .row {
+        margin: auto;
+        width: 65%;
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+        padding: 25;
+        height: 400 px;
+    }
+    
+    /* clears floats after the columns*/
+    .row:after {    
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    h2 {
+        font-family: Helvetica;
+        color: #114C77;
+        text-decoration: none;
+        font-size: 2vw;
+        font-weight: 60;
+        padding: 6px 35px;
+    }
+
+    p {
+        font-family: Helvetica;
+        color: #114C77;
+        text-decoration: none;
+        font-size: 1.2vw;
+        font-weight: 90;
+        padding: 10px 35px;
+    }
+
+    img {
+        border-radius: 25px;
+        padding: 15px 10px;
+    }
+
+    #banner {
+        border-radius: 0px;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        overflow-y: scroll;
+        animation: fadeInAnimation ease 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    @keyframes fadeInAnimation {
+        0% { opacity: 0; }
+        100% { opacity: 1;}
+    }
+
+    .reveal {
+        position: relative;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+
+    .reveal.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+    <ul>
+        <li> <a href = "pages/Contact.html">Contact</a></li>
+        <li> <a href = "pages/Projects.html">Projects</a></li>
+        <li style="float:right"><a class="active" href="index.html">Home</a></li>
+    </ul>
+
+    <body style= "background-color:#FFFAF6">
+  
+        <br>
+      
+      <img id = "banner" src = "https://cdn.discordapp.com/attachments/646535330765471766/1097629660189306991/image.png" 
+           width = 100% 
+           height = auto 
+           alt = "I am Kacie Yee">
+    
+     <br><br>
+
+     <div class = "row reveal">
+        <p> <br><br> </p>
+
+        <div class = "column">
+            <h2> Hello! </h2>
+            <p> 
+                My name is Kacie Yee, an aspiring engineer in 
+                my second year of studying Computer Science at 
+                the University of Texas at Dallas. 
+                <br><br>
+                At school, I’m highly active in a variety of 
+                organizations. As Event Coordinator of Women 
+                Mentoring Women in Engineering, a Project Manager 
+                in the Association for Computing Machinery, and 
+                President of a K-Pop Dance Team, it gets pretty 
+                busy, but really I enjoy everything I do. 
+                
+            </p>
+        </div>
+        <div class = "column">
+            <img src = "https://cdn.discordapp.com/attachments/646535330765471766/1092150825603842189/irl_pfp_beach.jpg" 
+                width = 90% 
+                height = auto 
+                alt = "Photo of Kacie by the beach">
+        </div>
+
+        <img src = "https://cdn.discordapp.com/attachments/646535330765471766/1097661191356158022/image.png" 
+           width = 14% 
+           height = auto >
+     </div>
+
+     
+
+
+
+</body>
+
+ 
+
+
+
+</html>
